@@ -1,0 +1,12 @@
+
+<div class="col-md-4">
+    
+    <add-node *ngIf="(ui | async).showAddNode" class="well col-md-12"></add-node>
+
+    <inspect-node *ngIf="(ui | async).showViewNode" class="well col-md-12"></inspect-node>
+
+    <calculator class="well panel col-md-12"></calculator>
+    <file-actions></file-actions>
+</div>
+
+<vis-render style="display: block" class="col-md-6"></vis-render>

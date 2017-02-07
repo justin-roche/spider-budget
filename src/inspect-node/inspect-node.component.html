@@ -1,0 +1,30 @@
+<h1>Inspect Node</h1>
+
+<form [formGroup]="inspectNodeForm" (ngSubmit)="save(addNodeForm)">
+  <fieldset>
+  <label>node id:</label>
+  <input type="text" formControlName="id">
+
+  <label>Amount:</label>
+  <input type="text" formControlName="amount">
+
+  <label>Type:</label>
+  <input type="text" formControlName="type">
+
+  <label>Conditions:</label>
+  <input type="text" formControlName="conditions">
+  </fieldset> 
+
+<fieldset formGroupName="description">
+
+  <label>For:</label>
+  <input type="text" formControlName="for">
+
+</fieldset>
+<!--
+  <label>Label:</label>
+  <input type="text" formControlName="label">-->
+
+  <button type="submit" >Update</button>
+</form>
+

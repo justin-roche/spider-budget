@@ -1,0 +1,53 @@
+<h1>Add Node</h1>
+
+<form [formGroup]="addNodeForm" (ngSubmit)="save(addNodeForm)">
+
+  <fieldset>
+
+  <label>Label:</label>
+  <input type="text" formControlName="label">
+
+  <label>Parents:</label>
+  <input type="text" formControlName="parentNodes">
+
+  <label>Amount:</label>
+  <input type="text" formControlName="amount">
+
+  <div *ngFor="let t of nodeTypes">
+    <label>
+      <input  class="radio-inline" 
+              type="radio"
+              formControlName="nodetype"
+              [value]="t">
+      {{t}}
+    </label>
+  </div>
+
+  <label>Frequency:</label>
+  <input type="text" formControlName="frequency">
+
+  <label>Period:</label>
+
+  <select formControlName="period">
+    <option *ngFor="let o of periods" [value]="o">{{o}}</option>
+  </select>
+
+  <label>Conditions:</label>
+  <select formControlName="conditions">
+    <option *ngFor="let o of conditionsArr" [value]="o">{{o}}</option>
+  </select>
+
+  </fieldset> 
+
+<fieldset formGroupName="description">
+
+  
+
+</fieldset>
+<!--
+  <label>Label:</label>
+  <input type="text" formControlName="label">-->
+
+  <button type="submit" class="btn btn-primary" [disabled]="!addNodeForm.valid">Save</button>
+</form>
+

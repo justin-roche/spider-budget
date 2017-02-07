@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+input, label {
+    display: block;
+}
+
+fieldset { 
+    width: 50%;
+}
+
+div { 
+    display: block;
+}
+
+.numField { 
+    border-bottom-color: blue;
+}
+
+.invalid{
+    border-bottom-color: red;
+}
+
+.valid{
+    border-bottom-color: red;
+}

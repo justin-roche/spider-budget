@@ -1,0 +1,6 @@
+<div>
+  <h1>Calculator Settings</h1>
+  <input type="range" min="0" max="100" step="1" value="1" (change)="rdx.dispatch({type: 'SET-TIME', payload: $event.target.value})">
+  <p>a {{(calc$ | async)?.time}} </p>
+</div>
+
